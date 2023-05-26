@@ -2,12 +2,12 @@
 {% load static %}
 {% block title %}{{ post.title }} - Blog Details{% endblock %}
 {% block content %}
-    <header class="header_area">
+  <header class="header_area">
       <div class="main_menu">
         <nav class="navbar navbar-expand-lg navbar-light">
           <div class="container box_1620">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <a class="navbar-brand logo_h" href="{% url 'index' %}"><img src="{% static 'img/logo.png' %}" alt=""></a>
+            <a class="navbar-brand logo_h" href="{% url 'index' %}"><img src="{% static 'img/logo.png' %}" alt="Sensive"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
@@ -31,7 +31,7 @@
       </div>
     </header>
 
-    <section class="mb-30px">
+  <section class="mb-30px">
       <div class="container">
         <div class="hero-banner hero-banner--sm">
           <div class="hero-banner__content">
@@ -47,15 +47,15 @@
       </div>
     </section>
 
-    <section class="blog-post-area section-margin">
+  <section class="blog-post-area section-margin">
       <div class="container">
         <div class="row">
           <div class="col-lg-8">
             <div class="main_blog_details">
               {% if post.image_url %}
-                <img class="img-fluid" src={{post.image_url}} alt="">
+                <img class="img-fluid" src={{post.image_url}} alt="{{post.title}}">
               {% else %}
-                <img class="img-fluid" src="{% static 'img/banner/blog.png' %}" alt="">
+                <img class="img-fluid" src="{% static 'img/banner/blog.png' %}" alt="Blog banner">
               {% endif %}
               <h4>{{post.title}}</h4>
               <div class="user_details">
@@ -131,7 +131,7 @@
       </div>
     </section>
 
-    <footer class="footer-area section-padding">
+  <footer class="footer-area section-padding">
       <div class="container">
         <div class="row">
           <div class="col-lg-3  col-md-6 col-sm-6">
