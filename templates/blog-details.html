@@ -1,17 +1,6 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 {% load static %}
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Remake Barber - Blog Details</title>
-    <link rel="icon" href="{% static 'img/favicon.png' %}" type="image/png">
-
-    <link rel="stylesheet" href="{% static 'styles.min.css' %}">
-  </head>
-  <body>
-    <!--================Header Menu Area =================-->
+{% block content %}
     <header class="header_area">
       <div class="main_menu">
         <nav class="navbar navbar-expand-lg navbar-light">
@@ -40,9 +29,7 @@
         </nav>
       </div>
     </header>
-    <!--================Header Menu Area =================-->
 
-    <!--================ Hero sm Banner start =================-->
     <section class="mb-30px">
       <div class="container">
         <div class="hero-banner hero-banner--sm">
@@ -58,10 +45,7 @@
         </div>
       </div>
     </section>
-    <!--================ Hero sm Banner end =================-->
 
-
-    <!--================ Start Blog Post Area =================-->
     <section class="blog-post-area section-margin">
       <div class="container">
         <div class="row">
@@ -145,9 +129,7 @@
         </div>
       </div>
     </section>
-    <!--================ End Blog Post Area =================-->
 
-    <!--================ Start Footer Area =================-->
     <footer class="footer-area section-padding">
       <div class="container">
         <div class="row">
@@ -216,8 +198,4 @@
         </div>
       </div>
     </footer>
-    <!--================ End Footer Area =================-->
-
-    <script src="{% static 'scripts.js' %}"></script>
-  </body>
-</html>
+{% endblock %}
