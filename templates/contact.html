@@ -1,23 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Remake Barber - Contact</title>
-    <link rel="icon" href="/static/img/favicon.png" type="image/png">
-
-
-    <link rel="stylesheet" href="/static/styles.min.css">
-  </head>
-  <body>
-    <!--================Header Menu Area =================-->
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
     <header class="header_area">
       <div class="main_menu">
         <nav class="navbar navbar-expand-lg navbar-light">
           <div class="container box_1620">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <a class="navbar-brand logo_h" href="index.html"><img src="/static/img/logo.png" alt=""></a>
+            <a class="navbar-brand logo_h" href="{% url 'index' %}"><img src="{% static 'img/logo.png' %}" alt=""></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
@@ -26,8 +15,8 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
               <ul class="nav navbar-nav menu_nav justify-content-center">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item active"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Home</a></li>
+                <li class="nav-item active"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
               </ul>
               <ul class="nav navbar-nav navbar-right navbar-social">
                 <li><a href="#"><i class="ti-facebook"></i></a></li>
@@ -40,9 +29,7 @@
         </nav>
       </div>
     </header>
-    <!--================Header Menu Area =================-->
 
-    <!--================ Hero sm banner start =================-->
     <section class="mb-30px">
       <div class="container">
         <div class="hero-banner hero-banner--sm">
@@ -50,7 +37,7 @@
             <h1>Contact Us</h1>
             <nav aria-label="breadcrumb" class="banner-breadcrumb">
               <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
               </ol>
             </nav>
@@ -58,14 +45,11 @@
         </div>
       </div>
     </section>
-    <!--================ Hero sm banner end =================-->
 
-
-    <!-- ================ contact section start ================= -->
     <section class="section-margin--small section-margin">
       <div class="container">
         <div class="d-none d-sm-block mb-5 pb-4">
-          Тут будет карта
+          {{ html_map|safe|escape }}
         </div>
 
 
@@ -121,10 +105,7 @@
         </div>
       </div>
     </section>
-    <!-- ================ contact section end ================= -->
 
-
-    <!--================ Start Footer Area =================-->
     <footer class="footer-area section-padding">
       <div class="container">
         <div class="row">
@@ -195,8 +176,5 @@
         </div>
       </div>
     </footer>
-    <!--================ End Footer Area =================-->
+{% endblock %}
 
-    <script src="/static/scripts.js"></script>
-  </body>
-</html>
